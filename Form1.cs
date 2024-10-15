@@ -21,10 +21,12 @@ namespace laba9
             if (checkBoxDialog1.Checked && checkBoxDialog2.Checked)
             {
                 MessageBox.Show($"Объем конуса: {volume} кубических единиц\nМасса конуса: {mass} единиц массы", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else if (checkBoxDialog1.Checked && !checkBoxDialog2.Checked)
+            }
+            else if (checkBoxDialog1.Checked && !checkBoxDialog2.Checked)
             {
                 MessageBox.Show($"Объем конуса: {volume} кубических единиц", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else if (!checkBoxDialog1.Checked && checkBoxDialog2.Checked) 
+            }
+            else if (!checkBoxDialog1.Checked && checkBoxDialog2.Checked)
             {
                 MessageBox.Show($"Массу конуса невозможно рассчитать без объема", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -78,6 +80,42 @@ namespace laba9
             dilog1.Controls.Add(buttonDialog1);
             dilog1.Controls.Add(panelDialog1);
             dilog1.ShowDialog();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            dilog1.Text = "Input";
+            dilog1.Size = new Size(390, 190);
+            dilog1.Controls.Add(textBox1);
+            dilog1.Controls.Add(textBox2);
+            dilog1.Controls.Add(textBox3);
+            dilog1.Controls.Add(labelDialog1);
+            dilog1.Controls.Add(labelDialog2);
+            dilog1.Controls.Add(labelDialog3);
+            dilog1.Controls.Add(buttonDialog1);
+            dilog1.Controls.Add(panelDialog1);
+            dilog1.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (checkBoxDialog1.Checked && checkBoxDialog2.Checked)
+            {
+                MessageBox.Show($"Объем конуса: {volume} кубических единиц\nМасса конуса: {mass} единиц массы", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (checkBoxDialog1.Checked && !checkBoxDialog2.Checked)
+            {
+                MessageBox.Show($"Объем конуса: {volume} кубических единиц", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!checkBoxDialog1.Checked && checkBoxDialog2.Checked)
+            {
+                MessageBox.Show($"Массу конуса невозможно рассчитать без объема", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -28,65 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelDialog1 = new Panel();
             checkBoxDialog1 = new CheckBox();
             checkBoxDialog2 = new CheckBox();
             buttonDialog1 = new Button();
-            label1 = new Label();
             labelDialog1 = new Label();
             labelDialog2 = new Label();
             labelDialog3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            panel1.SuspendLayout();
+            toolStrip1 = new ToolStrip();
+            toolStripButton1 = new ToolStripButton();
+            toolStripButton2 = new ToolStripButton();
+            toolStripButton3 = new ToolStripButton();
             panelDialog1.SuspendLayout();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(82, 30);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(113, 105);
-            panel1.TabIndex = 0;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(17, 74);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(17, 38);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Work";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(17, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Input";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // panelDialog1
             // 
@@ -127,15 +86,6 @@
             buttonDialog1.Text = "Accept";
             buttonDialog1.UseVisualStyleBackColor = true;
             buttonDialog1.Click += buttonDialog1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(119, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(41, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Меню";
             // 
             // labelDialog1
             // 
@@ -185,38 +135,75 @@
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 0;
             // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(275, 25);
+            toolStrip1.TabIndex = 2;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(39, 22);
+            toolStripButton1.Text = "input";
+            toolStripButton1.Click += toolStripButton1_Click;
+            // 
+            // toolStripButton2
+            // 
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(37, 22);
+            toolStripButton2.Text = "work";
+            toolStripButton2.Click += toolStripButton2_Click;
+            // 
+            // toolStripButton3
+            // 
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
+            toolStripButton3.ImageTransparentColor = Color.Magenta;
+            toolStripButton3.Name = "toolStripButton3";
+            toolStripButton3.Size = new Size(30, 22);
+            toolStripButton3.Text = "exit";
+            toolStripButton3.Click += toolStripButton3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(275, 153);
-            Controls.Add(label1);
-            Controls.Add(panel1);
+            ClientSize = new Size(275, 125);
+            Controls.Add(toolStrip1);
             Name = "Form1";
             Text = "Лабораторная работа 9";
-            panel1.ResumeLayout(false);
             panelDialog1.ResumeLayout(false);
             panelDialog1.PerformLayout();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Panel panelDialog1;
-        private Label label1;
         private Label labelDialog1;
         private Label labelDialog2;
         private Label labelDialog3;
-        private Button button3;
-        private Button button2;
-        private Button button1;
         private Button buttonDialog1;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private CheckBox checkBoxDialog1;
         private CheckBox checkBoxDialog2;
+        private ToolStrip toolStrip1;
+        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripButton2;
+        private ToolStripButton toolStripButton3;
     }
 }
